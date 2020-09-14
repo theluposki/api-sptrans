@@ -20,8 +20,12 @@ app.use(morgan('tiny'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/', async (req,res) => {
-    res.send({ token: process.env.AUTH_COOKIE })
+app.get('/info', async (req,res) => {
+    res.send({
+        code: 200,
+        status: 'OK', 
+        token: process.env.AUTH_COOKIE 
+    })
 })
 
 app.get('/linha/:lt', async (req,res) => {
