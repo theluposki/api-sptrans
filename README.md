@@ -98,3 +98,19 @@
     ```bash
         GET /linha/7055 200 192 - 5610.733 ms
     ```
+    Objetos de retorno.
+
+    - [int] <b>cl</b> Código identificador da linha. Este é um <b>código</b> identificador único de cada linha do sistema (por sentido de operação) 
+
+    - [bool] <b>lc</b> Indica se uma linha opera no modo <b>circular</b> (sem um terminal secundário)
+
+    - [string] <b>lt</b> Informa a primeira parte do <b>letreiro numérico da linha</b> 
+
+    - [int] <b>tl</b> Informa a segunda parte do letreiro numérico da linha, que indica se a linha opera nos modos:
+    <b>BASE (10), ATENDIMENTO (21, 23, 32, 41)</b> 
+
+    - [int] <b>sl</b> Informa o sentido ao qual a linha atende, onde <b>1</b> significa <b>Terminal Principal</b> para <b>Terminal Secundário</b> e <b>2</b> para <b>Terminal Secundário</b> para <b>Terminal Principal</b> 
+
+    - [str] <b>tp</b> Informa o letreiro descritivo da linha no sentido <b>Terminal Principal</b> para <b>Terminal Secundário</b> 
+
+    - [str] <b>ts</b> Informa o letreiro descritivo da linha no sentido <b>Terminal Secundário</b> para <b>Terminal Principal</b>
